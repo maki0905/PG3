@@ -1,29 +1,10 @@
 ﻿#include <stdio.h>
-#include <typeinfo>
 
 
 template <typename T>
 T Min(T a, T b) {
 	if (a < b) {
-		if (typeid(T) == typeid(int)) {
-			printf("%d\n", a);
-		}
-		if (typeid(T) == typeid(float)) {
-			printf("%f\n", a);
-		}
-		if (typeid(T) == typeid(double)) {
-			printf("%lf\n", a);
-		}
 		return a;
-	}
-	if (typeid(T) == typeid(int)) {
-		printf("%d\n", b);
-	}
-	if (typeid(T) == typeid(float)) {
-		printf("%f\n", b);
-	}
-	if (typeid(T) == typeid(double)) {
-		printf("%lf\n", b);
 	}
 	return b;
 }
@@ -40,9 +21,9 @@ int main() {
 	double num_double[2] = { 8.0f, 10.0f };
 	char num_char0 = '8';
 	char num_char1 = '10';
-	Min(num_int[0], num_int[1]);
-	Min(num_float[0], num_float[1]);
-	Min(num_double[0], num_double[1]);
+	printf("%d\n", Min(num_int[0], num_int[1]));
+	printf("%f\n", Min(num_float[0], num_float[1]));
+	printf("%lf\n", Min(num_double[0], num_double[1]));
 	Min(num_char0, num_char1);
 	
 	
