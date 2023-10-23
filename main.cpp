@@ -1,4 +1,4 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 #include <functional>
 #include <stdlib.h>
 #include <Windows.h>
@@ -8,10 +8,10 @@ int main(int argc, const char* argv[]) {
 	std::function<void(int)> result = [] (int choice){
 		int dice = rand() % 6 + 1;
 		if (dice % 2 == choice) {
-			[=]() {printf("“–‚½‚è!! ƒTƒCƒRƒ‚Ì–Ú : %d\n", dice); }();
+			[=]() {printf("å½“ãŸã‚Š!! ã‚µã‚¤ã‚³ãƒ­ã®ç›® : %d\n", dice); }();
 		}
 		else {
-			[=]() {printf("‚Í‚¸‚ê;;  ƒTƒCƒRƒ‚Ì–Ú : %d\n", dice); }();
+			[=]() {printf("ã¯ãšã‚Œ;;  ã‚µã‚¤ã‚³ãƒ­ã®ç›® : %d\n", dice); }();
 		}
 	};
 	std::function<void(int)> judge = [=] (int choice){
@@ -20,8 +20,8 @@ int main(int argc, const char* argv[]) {
 	};
 	int choice = 0;
 	while (choice != 9) {
-		[]() {printf("”¼(Šï”)‚È‚ç1‚ğ’š(‹ô”)‚È‚ç0‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢\n"); }();
-		[]() {printf("‚â‚ß‚éê‡‚Í9‚ğ‰Ÿ‚µ‚Ä‚­‚¾‚³‚¢\n"); }();
+		[]() {printf("åŠ(å¥‡æ•°)ãªã‚‰1ã‚’ä¸(å¶æ•°)ãªã‚‰0ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„\n"); }();
+		[]() {printf("ã‚„ã‚ã‚‹å ´åˆã¯9ã‚’æŠ¼ã—ã¦ãã ã•ã„\n"); }();
 		[&]() {scanf_s("%d", &choice); }();
 		if (choice < 2) {
 			judge(choice);
