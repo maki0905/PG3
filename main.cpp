@@ -1,4 +1,4 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 #include <stdlib.h>
 #include <Windows.h>
 
@@ -7,10 +7,10 @@ typedef void (*PFunc)(int*);
 void Result(int *s) {
 	int result = rand() % 6 + 1;
 	if (result % 2 == *s) {
-		printf("“–‚½‚è!! ƒTƒCƒRƒ‚Ì–Ú : %d\n", result);
+		printf("å½“ãŸã‚Š!! ã‚µã‚¤ã‚³ãƒ­ã®ç›® : %d\n", result);
 	}
 	else {
-		printf("‚Í‚¸‚ê;;  ƒTƒCƒRƒ‚Ì–Ú : %d\n", result);
+		printf("ã¯ãšã‚Œ;;  ã‚µã‚¤ã‚³ãƒ­ã®ç›® : %d\n", result);
 	}
 }
 
@@ -22,8 +22,8 @@ void judge(PFunc p, int choice) {
 int main(void) {
 	int choice = 0;
 	while (choice != 9) {
-		printf("”¼(Šï”)‚È‚ç1‚ğ’š(‹ô”)‚È‚ç0‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢\n");
-		printf("‚â‚ß‚éê‡‚Í9‚ğ‰Ÿ‚µ‚Ä‚­‚¾‚³‚¢\n");
+		printf("åŠ(å¥‡æ•°)ãªã‚‰1ã‚’ä¸(å¶æ•°)ãªã‚‰0ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„\n");
+		printf("ã‚„ã‚ã‚‹å ´åˆã¯9ã‚’æŠ¼ã—ã¦ãã ã•ã„\n");
 		scanf_s("%d", &choice);
 		if (choice != 9) {
 			if (choice < 2) {
