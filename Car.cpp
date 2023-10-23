@@ -3,6 +3,6 @@
 
 void Car::Move()
 {
-	printf("車は地上を走る\n");
+	printf("車は陸を走る\n");
 
 }
