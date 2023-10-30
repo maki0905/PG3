@@ -4,7 +4,7 @@
 
 typedef void (*PFunc)(int*);
 
-void Result(int *s) {
+void DrawResult(int *s) {
 	int result = rand() % 6 + 1;
 	if (result % 2 == *s) {
 		printf("当たり!! サイコロの目 : %d\n", result);
@@ -13,9 +13,9 @@ void Result(int *s) {
 		printf("はずれ;;  サイコロの目 : %d\n", result);
 	}
 }
+void judge(PFunc p,int second, int choice) {
+	Sleep(second * 1000);
 
-void judge(PFunc p, int choice) {
-	Sleep(3 * 1000);
 	p(&choice);
 }
 
@@ -27,8 +27,8 @@ int main(void) {
 		scanf_s("%d", &choice);
 		if (choice != 9) {
 			if (choice < 2) {
-				PFunc p = Result;
-				judge(p, choice);
+				PFunc p = DrawResult;
+				judge(p,3, choice);
 			}
 		}
 	}
