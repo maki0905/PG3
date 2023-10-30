@@ -15,7 +15,6 @@ void DrawResult(int *s) {
 }
 void judge(PFunc p,int second, int choice) {
 	Sleep(second * 1000);
-
 	p(&choice);
 }
 
