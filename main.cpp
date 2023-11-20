@@ -4,7 +4,7 @@
 #include <Windows.h>
 
 int main(int argc, const char* argv[]) {
-	
+	int second = 3;
 	std::function<void(int)> result = [] (int choice){
 		int dice = rand() % 6 + 1;
 		if (dice % 2 == choice) {
@@ -14,8 +14,8 @@ int main(int argc, const char* argv[]) {
 			[=]() {printf("はずれ;;  サイコロの目 : %d\n", dice); }();
 		}
 	};
-	std::function<void(int)> judge = [=] (int choice){
-		Sleep(3 * 1000);
+	std::function<void( int)> judge = [=]( int choice) {
+		Sleep(second * 1000);
 		result(choice);
 	};
 	int choice = 0;
