@@ -14,8 +14,8 @@ int main() {
 	std::string&& c = std::move(a);
 	end[1] = std::chrono::system_clock::now();
 
-	std::cout << "ƒRƒs[ : " << std::chrono::duration_cast<std::chrono::microseconds>(end[0] - start[0]).count() << "ƒÊs" << std::endl;
-	std::cout << "ˆÚ“® : " << std::chrono::duration_cast<std::chrono::microseconds>(end[1] - start[1]).count() << "ƒÊs" << std::endl;
+	std::cout << "ã‚³ãƒ”ãƒ¼ : " << std::chrono::duration_cast<std::chrono::microseconds>(end[0] - start[0]).count() << "Î¼s" << std::endl;
+	std::cout << "ç§»å‹• : " << std::chrono::duration_cast<std::chrono::microseconds>(end[1] - start[1]).count() << "Î¼s" << std::endl;
 
 	return 0;
 }
